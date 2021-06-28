@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Paskaita Javascript 01</title>
+
+</head>
+<body>
+    <h1>Javascript pirma paskaita</h1>
+    <p>Sia paskaita pradesime Javascript pradmenis</p>
+
+    <p class="keiciamas-turinys">Cia keiciamas turinys</p>
+
+    <script>
+        
+        //"use strict"; iveda grieztesne tvarka programavime
+        //Pasirinkome elementa su  document.querySelector(".keiciamas-tuirnys")
+        // document.querySelector(".keiciamas-turinys").innerHTML = "Sekmingai pakeiciau p elemento teksta";
+        // console.log(document.querySelector(".keiciamas-turinys").innerHTML);
+        // document.querySelector(".keiciamas-turinys").innerHTML = "Antra karta sekmingai pakeiciau p elemento teksta";
+        // console.log(document.querySelector(".keiciamas-turinys").innerHTML);
+
+        //pasirinkta elementa isvedame i console
+        // console.log(document.querySelector(".keiciamas-turinys").innerHTML);
+
+
+
+
+        //1 Veiksmas. Priskyrimas - mes pasirenkame kazkoki elementa is turinio;
+        //2 veiksmas. Atliekami pakeitimai;
+        //3 veiksmas. Pakeitimai yra atvaizduojami.
+
+
+
+        //Kintamieji
+        //Kintamasis - iskirta vieta kompiuterio atmintyje, kurioje mes saugome infromacija.
+        //Geriausia praktika kaip rasyti kintamaji: kintamasisVienas
+
+        var kintamasis1;  //Kintamojo deklravimas
+        kintamasis1 = 5; //kintamojo priskyrimas
+        console.log(kintamasis1);  //kintamojo isvedimas
+
+        var kintamasis2;
+        kintamasis2 = "kintamasis saugo teksta"; //String
+        console.log(kintamasis2);
+
+        var kintamasis3;
+        kintamasis3 = 'kintamasis saugo teksta';  //String
+        console.log(kintamasis3);
+
+        //Viengubos ir dvigubos kabutes kad atvaizuoti, del to galim rasyti arba taip, arba taip.
+        var kintamasis4 = " Knyga 'Altoriu seselyje' ";
+        var kintamasis5 = ' Knyga "Altoriu seselyje" ';
+        console.log(kintamasis4);
+        console.log(kintamasis5);
+
+        var kintamsis6;
+        kintamasis6 = 5.5;
+        console.log(kintamasis6);
+
+
+        //Tiesa,  - boolean (bull) ipo kintamasis
+        var tiesa;
+        tiesa = true;
+        var melas;
+        melas=false;
+
+        console.log(tiesa);
+        console.log(melas);
+
+        //Isvesti dvieju skaitmenu suma
+        // 2 kintamieji - a,b
+        var a = 1;
+        var b = 2;
+        var sum = a+b;
+        console.log(sum);
+
+        //Kitas variantas kaip galima aprasyti ir isvesti suma
+        var a,b,sum;
+        a=1;
+        b=2;
+        a=0;
+        sum=a+b;
+        console.log("Dvieju saitmenu sumos rezultatas");
+        console.log(sum);
+
+        //Vienam kintamajam priskirti kito kintamojo reiksme
+        var a,b,sum;
+        a=10;
+        b=2;
+        
+        
+        console.log(sum);
+
+        //Dvieju skaitmenu skirtumas
+        var skirtumas, sk1,sk2;
+        sk1=10;
+        sk2=20;
+        skirtumas=10-20;
+        console.log("Dvieju saitmenu skirtumo rezultatas");
+        console.log(skirtumas);
+
+
+        //Daugyba
+        var daugyba;
+        sk1=10;
+        sk2=10;
+        daugyba=sk1 * sk2;
+        console.log("Dvieju saitmenu daugybos rezultatas");
+        console.log(daugyba);
+
+        //Dalyba
+        var dalybosRezultatas;
+        sk1=16;
+        sk2=5;
+        dalybosRezultatas=sk1 / sk2;
+        console.log("Dvieju saitmenu dalybos rezultatas");
+        console.log(dalybosRezultatas); //3.2, Jei tai butu PHP, butu 16/5=3
+
+        //Dalyba, kad butu sveikas skaicius
+        var dalybosRezultatas;
+        sk1=16;
+        sk2=5;
+        dalybosRezultatas = parseInt (sk1 / sk2);  //"Nesvarbu ka tu gavai sklaisuteliuose, tu pasiimk sveikaja dali - parseInt"
+        console.log("Dvieju saitmenu dalybos rezultatas su sveikuoju skaiciumi");
+        console.log(dalybosRezultatas); //3.2, Jei tai butu PHP, butu 16/5=3
+
+        //Dalyba(liekanos gavimas)
+        var liekana;
+        liekana = sk1 % sk2; // 16 % 5 = 1  % - liekanos zenklas
+        console.log("Dvieju saitmenu dalybos rezultatas su liekana");
+        console.log(liekana);
+
+
+        //Pagal liekana atrinkimas kas ntras ar kas trecias skaicius
+        var k1, k2, k3, k4;
+        k1 = 157;
+        k2= 48;
+        k3=103;
+        k4=10248986413;
+
+        var l1, l2, l3, l4;
+        l1 = k1 % 2; //liekana 0 - skaicius lyginis
+        l2 = k2 % 2; // liekana 1 - skaicius nelyginis
+        l3 = k3 % 2;
+        l4 = k4 % 2; 
+
+
+        //kelimas laipsniu
+        var kelimas;
+        // kelimas = sk1 ** 5;  Galima uzrasyti 2 budais
+        kelimas=Math.pow(sk1,5);
+        console.log("Skaitmens kelimas n-tuoju laipsniu");
+        console.log(kelimas);
+
+        //saknis 2 laipsnio
+        var saknis;
+        // saknis = kelimas ** (1/2); << Matematinis variantas, jis geras, jeigu reiketu traukti treciojo ar penktojo laipsnio
+        saknis = Math.sqrt(kelimas);  //Skanies funkcija javascript'e, antrojo laipsnio
+        console.log("Saknies traukimas");
+        console.log(saknis);
+
+
+        //atemimas irpridejimas elementui po vienetuka
+        var i = 1024;
+        i++;
+        console.log("Didina vienetuku, naudojamas ciklui");
+        console.log(i); // 1025, didina vienetuku
+
+        i--;
+        console.log("Mazina vienetuku, naudojamas ciklui");
+        console.log(i); // 1024, mazina vienetuku
+
+        var naujaSuma;
+
+        naujaSuma = 5 + 4 * 9;
+        // matematiskai - 41;
+        // eiliskumas - 81;
+        console.log(naujaSuma);
+
+        var rez;
+        rez = 5 / 4 *3;
+        // matematiskai - 3.75
+        // jeigu noreciau, kad daugyba eitu is pradziu, dedame i sklaisutus, kaip matematikoj
+        // Javascript svarbus matematiniai zenklai ir skaiciuoja matematiskai
+        console.log(rez);
+
+        //Saknis is neigiamo  - gauname NaN (Negalima saknis)
+        var saknisN = Math.sqrt(-8);
+        console.log(saknisN);
+
+
+        //Dalyba is nulio - gauname "Infinity (begalybe)"
+        var dalybaN = 8 / 0;
+        console.log(dalybaN);
+
+
+        //kelimas 0 - nuliniu laipsniu nekelia, gauname 1 visada
+        var rez1=1;
+        rez1 = 10 ** 0;
+        console.log(rez1);
+
+        // teksto sudetis su skaiciumi. tekstas pavercia abudu skaicius i teksta ir juos atvaizduoja
+        var tekstas = "as esu tekstas";
+        var skaicius1 = -5;
+
+        var duKintamieji = tekstas + skaicius1;
+        console.log(duKintamieji);
+
+
+        // su minuso zenklu, gausime NaN
+        var duKintamieji = tekstas - skaicius1;
+        console.log(duKintamieji);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
